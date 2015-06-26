@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "SettingsViewController.h"
 @interface ViewController ()
 
 @end
@@ -154,6 +154,8 @@
     self.tempDrawImage.image = nil;
     UIGraphicsEndImageContext();
 }
+
+
 @end
 
 

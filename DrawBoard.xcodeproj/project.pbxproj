@@ -40,6 +40,7 @@
 		BC2FCD881B3B7B3400E3D8FB /* thickness.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2FCD721B3B7B3400E3D8FB /* thickness.png */; };
 		BC2FCD891B3B7B3400E3D8FB /* width.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2FCD731B3B7B3400E3D8FB /* width.png */; };
 		BC2FCD8A1B3B7B3400E3D8FB /* Yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2FCD741B3B7B3400E3D8FB /* Yellow.png */; };
+		BC9162D11B3CB1BA0097803D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9162D01B3CB1BA0097803D /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		BC2FCD721B3B7B3400E3D8FB /* thickness.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thickness.png; sourceTree = "<group>"; };
 		BC2FCD731B3B7B3400E3D8FB /* width.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = width.png; sourceTree = "<group>"; };
 		BC2FCD741B3B7B3400E3D8FB /* Yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yellow.png; sourceTree = "<group>"; };
+		BC9162CF1B3CB1BA0097803D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		BC9162D01B3CB1BA0097803D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,8 @@
 				BC2FCD341B3B78F900E3D8FB /* AppDelegate.m */,
 				BC2FCD361B3B78F900E3D8FB /* ViewController.h */,
 				BC2FCD371B3B78F900E3D8FB /* ViewController.m */,
+				BC9162CF1B3CB1BA0097803D /* SettingsViewController.h */,
+				BC9162D01B3CB1BA0097803D /* SettingsViewController.m */,
 				BC2FCD391B3B78F900E3D8FB /* Main.storyboard */,
 				BC2FCD3C1B3B78F900E3D8FB /* Images.xcassets */,
 				BC2FCD3E1B3B78F900E3D8FB /* LaunchScreen.xib */,
@@ -342,6 +347,7 @@
 				BC2FCD381B3B78F900E3D8FB /* ViewController.m in Sources */,
 				BC2FCD351B3B78F900E3D8FB /* AppDelegate.m in Sources */,
 				BC2FCD321B3B78F900E3D8FB /* main.m in Sources */,
+				BC9162D11B3CB1BA0097803D /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +542,7 @@
 				BC2FCD511B3B78F900E3D8FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC2FCD521B3B78F900E3D8FB /* Build configuration list for PBXNativeTarget "DrawBoardTests" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +551,7 @@
 				BC2FCD541B3B78F900E3D8FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
