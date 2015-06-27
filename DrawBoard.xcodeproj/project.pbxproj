@@ -41,6 +41,7 @@
 		BC2FCD891B3B7B3400E3D8FB /* width.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2FCD731B3B7B3400E3D8FB /* width.png */; };
 		BC2FCD8A1B3B7B3400E3D8FB /* Yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2FCD741B3B7B3400E3D8FB /* Yellow.png */; };
 		BC9162D11B3CB1BA0097803D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9162D01B3CB1BA0097803D /* SettingsViewController.m */; };
+		BCB8FE991B3F539100011D7D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCB8FE981B3F539100011D7D /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		BC2FCD741B3B7B3400E3D8FB /* Yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yellow.png; sourceTree = "<group>"; };
 		BC9162CF1B3CB1BA0097803D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		BC9162D01B3CB1BA0097803D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		BCB8FE981B3F539100011D7D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCB8FE991B3F539100011D7D /* Social.framework in Frameworks */,
 				BC2FCD5C1B3B793500E3D8FB /* CoreGraphics.framework in Frameworks */,
 				BC2FCD5A1B3B792B00E3D8FB /* Foundation.framework in Frameworks */,
 				BC2FCD581B3B791F00E3D8FB /* UIKit.framework in Frameworks */,
@@ -185,6 +188,7 @@
 		BC2FCD5D1B3B796800E3D8FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BCB8FE981B3F539100011D7D /* Social.framework */,
 				BC2FCD5B1B3B793500E3D8FB /* CoreGraphics.framework */,
 				BC2FCD591B3B792B00E3D8FB /* Foundation.framework */,
 				BC2FCD571B3B791F00E3D8FB /* UIKit.framework */,

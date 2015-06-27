@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import "SettingsViewController.h"
+#import <twitter/TWTweetComposeViewController.h>
+#import <Social/Social.h>
+
 @interface ViewController ()
 
 @end
@@ -150,7 +153,127 @@
     UIGraphicsEndImageContext();
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    SettingsViewController *settingsVC = (SettingsViewController *)segue.destinationViewController;
+    settingsVC.delegate = self;
+    settingsVC.brush = brush;
+    settingsVC.opacity = opacity;
+    settingsVC.red = red;
+    settingsVC.green = green;
+    settingsVC.blue = blue;
+}
+
+- (IBAction)save:(id)sender{
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"" delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:@"Save to Camera Roll", @"Tweet it!",@"Cancel",nil];
+    [actionSheet showInView:self.view];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 1) {
+        // tweet image
+        if([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+            
+            SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+            
+            SLComposeViewControllerCompletionHandler myBlock = ^(SLComposeViewControllerResult result){
+                if (result == SLComposeViewControllerResultCancelled) {
+                    
+                    NSLog(@"Cancelled");
+                    
+                } else
+                    
+                {
+                    NSLog(@"Done");
+                }
+                
+                [controller dismissViewControllerAnimated:YES completion:Nil];
+            };
+            controller.completionHandler =myBlock;
+            
+            UIGraphicsBeginImageContextWithOptions(self.mainImage.bounds.size, NO, 0.0);
+            [self.mainImage.image drawInRect:CGRectMake(0, 0, self.mainImage.frame.size.width, self.mainImage.frame.size.height)];
+            UIImage *SaveImage = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
+            
+            //Adding the Text to the facebook post value from iOS
+            [controller setInitialText:@"testing"];
+            
+            //Adding the Image to the facebook post value from iOS
+            
+            [controller addImage:SaveImage];
+            
+            [self presentViewController:controller animated:YES completion:Nil];
+            
+        }
+        else{
+            NSLog(@"UnAvailable");
+        }
+    }
+    if (buttonIndex == 0) {
+        UIGraphicsBeginImageContextWithOptions(self.mainImage.bounds.size, NO,0.0);
+        [self.mainImage.image drawInRect:CGRectMake(0, 0, self.mainImage.frame.size.width, self.mainImage.frame.size.height)];
+        UIImage *SaveImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        UIImageWriteToSavedPhotosAlbum(SaveImage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+    }
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo{
+    if (error != NULL)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Image could not be saved.Please try again"  delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Close", nil];
+        [alert show];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Image was successfully saved in photoalbum"  delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Close", nil];
+        [alert show];
+    }
+}
+#pragma mark - SettingsViewControllerDelegate methods
+- (void)closeSettings:(id)sender{
+    brush = ((SettingsViewController *)sender).brush;
+    opacity = ((SettingsViewController *)sender).opacity;
+    red = ((SettingsViewController *)sender).red;
+    green = ((SettingsViewController *)sender).green;
+    blue = ((SettingsViewController*)sender).blue;
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

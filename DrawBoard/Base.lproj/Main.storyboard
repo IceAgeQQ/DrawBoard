@@ -137,7 +137,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JZm-ye-fWs">
-                                <rect key="frame" x="354.99999964857909" y="485" width="28" height="115"/>
+                                <rect key="frame" x="354.99999946108528" y="485" width="28" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Button" image="Eraser.png">
@@ -274,17 +274,72 @@
                                     <action selector="sliderChanged:" destination="tsE-dS-xii" eventType="valueChanged" id="b90-s8-Nxw"/>
                                 </connections>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RGB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aQ8-7o-v3j">
+                                <rect key="frame" x="9" y="418" width="37" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="255" id="qRC-vr-Ub2">
+                                <rect key="frame" x="27" y="447" width="118" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="tsE-dS-xii" eventType="valueChanged" id="DsU-Ia-GHl"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="255" id="I28-12-kDs">
+                                <rect key="frame" x="27" y="485" width="118" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="tsE-dS-xii" eventType="valueChanged" id="PhK-dA-7no"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="255" id="tMc-80-C2x">
+                                <rect key="frame" x="27" y="518" width="118" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="tsE-dS-xii" eventType="valueChanged" id="AzO-L1-OLN"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R:XXX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hf4-f4-sSm">
+                                <rect key="frame" x="182" y="451" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G:XXX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Reh-Pz-QXd">
+                                <rect key="frame" x="182" y="489" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B:XXX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mjk-pN-zlB">
+                                <rect key="frame" x="182" y="522" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="4FY-m0-Y5p"/>
                     <connections>
+                        <outlet property="blueControl" destination="tMc-80-C2x" id="2Si-7P-JNw"/>
+                        <outlet property="blueLabel" destination="Mjk-pN-zlB" id="0UP-9O-1Cr"/>
                         <outlet property="brushControl" destination="quZ-hz-6Ko" id="4aV-AX-v6s"/>
                         <outlet property="brushPreview" destination="w5w-wP-yrb" id="Sxo-o7-eV1"/>
                         <outlet property="brushValueLabel" destination="gPh-Ky-ceQ" id="oSJ-EF-3aR"/>
+                        <outlet property="greenControl" destination="I28-12-kDs" id="EgE-Wd-E38"/>
+                        <outlet property="greenLabel" destination="Reh-Pz-QXd" id="Ttv-ZN-CQO"/>
                         <outlet property="opacityControl" destination="xtA-0y-VYA" id="DWI-N8-LnO"/>
                         <outlet property="opacityPreview" destination="eBt-Kq-9yS" id="E4T-rd-uuR"/>
                         <outlet property="opacityValueLabel" destination="CUz-nR-pF3" id="S0R-SC-2Fs"/>
+                        <outlet property="redControl" destination="qRC-vr-Ub2" id="dzE-ZC-cf0"/>
+                        <outlet property="redLabel" destination="Hf4-f4-sSm" id="twt-yv-Omm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ooo-82-Ecl" userLabel="First Responder" sceneMemberID="firstResponder"/>

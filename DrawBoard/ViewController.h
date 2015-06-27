@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController {
+#import "SettingsViewController.h"
+@interface ViewController : UIViewController <SettingsViewControllerDelegate,UIActionSheetDelegate>{
     
     //lastPoint stores the last drawn point on the canvas
     //red, blue, and green store the current RGB values of the selected color.
